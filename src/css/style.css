@@ -1,0 +1,147 @@
+:root {
+    --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    --animation-duration: 250ms;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    color: DarkSlateBlue;
+    background-color: Lavender;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: Lavender;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+    color: DarkSlateBlue;
+    background-color: transparent;
+}
+
+input {
+    padding: 20px;
+    min-width: 300px;
+    border-radius: 8px;
+
+}
+
+input:focus, input:hover {
+    outline: none;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.search-form {
+    position: sticky;
+    top: 0px;
+    z-index: 100;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #C3B1E1;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 12px;
+}
+
+.search-form>button {
+    margin-left: 10px;
+    color: DarkSlateBlue;
+    background-color: #fff;
+    padding: 10px;
+    min-width: 100px;
+    border-radius: 8px;
+}
+
+/* LoadMore Button */
+
+.load-more {
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #C3B1E1;
+    color: DarkSlateBlue;
+    padding: 10px;
+    min-width: 200px;
+    min-height: 50px;
+    border-radius: 8px;
+}
+
+.button {
+    display: block;
+}
+
+.button.is-hidden {
+    display: none;
+}
+
+/* Gallery */
+
+.gallery {
+    display: grid;
+    max-width: 1140px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-auto-rows: 300px;
+    grid-gap: 12px;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.photo-card {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),
+        0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+}
+
+.gallery__image:hover {
+    transform: scale(1.03);
+}
+
+.gallery__image {
+    display: block;
+    height: 80%;
+    width: 100%;
+    object-fit: cover;
+    transition: transform var(--animation-duration) var(--timing-function);
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20%;
+    background-color: #fff;
+    font-size: 12px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.info-item:not(:last-child) {
+    margin-right: 5px;
+    color: DarkSlateBlue;
+}
